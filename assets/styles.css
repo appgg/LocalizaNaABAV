@@ -7,12 +7,68 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
+  background-color: #a8a8a8;
 }
 
 model-viewer {
   width: 100%;
   height: 90%;
-  background-color: #ffffff;
+  background-color: #a8a8a8;
+  --poster-color: transparent;
+}
+.controls{
+  width: 78px;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+}
+.controls.left{
+  right: inherit;
+  left: 5px;
+}
+
+.controls button{
+  background: #bdbdbd;
+  border-radius: 32px;
+  font-weight: 700;
+  border: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 64px;
+  padding: 4px;
+  margin: 5px;
+  position: relative;
+  transition: opacity 0.3s;
+  width: 64px;
+  border: solid 2px #fff;
+}
+.controls button:nth-child(2){
+  background: #000;
+  color: #fff;
+}
+
+.voltar{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #00984b;
+  color: #cfdd28;
+  border-radius: 32px;
+  font-weight: 900;
+  border: solid 2px #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 64px;
+  padding: 4px;
+  margin: 0 8px;
+  position: relative;
+  transition: opacity 0.3s;
+  width: 64px;
+}
+.voltar.hide{
+  visibility: hidden;
 }
 
 .Hotspot {
@@ -102,7 +158,8 @@ model-viewer {
 }
 
 .update-bar {
-  background-color: rgba(255, 255, 255, 0.9);
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  background-color: #00984b;
   width: 0%;
   height: 100%;
   border-radius: 25px;
